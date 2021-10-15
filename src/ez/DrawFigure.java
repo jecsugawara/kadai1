@@ -14,7 +14,7 @@ import java.awt.Color;
 
 public class DrawFigure {
 	public static void main(String[] args) {
-		EZ.initialize(400, 400); // 画面の大きさを決める．
+		EZ.initialize(500, 400); // 画面の大きさを決める．
 
 		//背景色を設定
 		EZ.setBackgroundColor(Color.PINK);
