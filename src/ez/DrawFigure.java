@@ -32,7 +32,8 @@ public class DrawFigure {
 		EZ.addPolygon(xp, yp, Color.MAGENTA, false);
 		
 		//イメージを描画 (ファイル名, 中心座標x,y)
-		EZ.addImage("src/ez/cat.jpg", 300,300);
+		EZImage cat = EZ.addImage("src/ez/cat.jpg", 300,300);
+		cat.turnLeft(30); 
 
 		//文字を描画する(文字列の中心座標x, y, 文字列，色 [,サイズ] )
 		EZ.addText(40,20, "Hello World", Color.BLACK, 12);
