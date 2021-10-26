@@ -15,10 +15,10 @@ import java.awt.Color;
 public class DrawFigure {
 	public static void main(String[] args) {
 		
-		EZ.initialize(300, 400); // 画面の大きさを決める．
+		EZ.initialize(300,300); // 画面の大きさを決める．
 
 		//背景色を設定
-		EZ.setBackgroundColor(Color.PINK);
+		EZ.setBackgroundColor(Color.LIGHT_GRAY);
 
 		//線を描く(始点x, 始点y, 終点x, 終点y, 色, 線幅)
 		EZ.addLine(40,0, 40,50, Color.RED, 1);
@@ -33,21 +33,15 @@ public class DrawFigure {
 		EZ.addPolygon(xp, yp, Color.MAGENTA, false);
 		
 		//イメージを描画 (ファイル名, 中心座標x,y)
-		EZImage cat = EZ.addImage("src/ez/cat.jpg", 300,300);
-		cat.turnLeft(30); 
+		EZ.addImage("src/ez/cat.jpg", 300,300);
 
 		//文字を描画する(文字列の中心座標x, y, 文字列，色 [,サイズ] )
 		EZ.addText(40,20, "Hello World", Color.BLACK, 12);
 		EZ.addText(300,50, "012あいう漢字", Color.BLACK, 24);
 
 		// 円を描く．(中心座標x, y, 幅，高さ，色，塗りつぶし)
-		EZ.addCircle(100, 100, 150, 150, Color.GREEN, true);
+		EZ.addCircle(100, 100, 150, 150, Color.BLUE, true);
 		EZ.addCircle(200, 200, 200, 200, Color.RED,  false);
 		
-		int[] nxp = {200,205,195,200};
-		int[] nyp = {100,200,200,100};
-		EZPolygon needle1 = EZ.addPolygon(nxp, nyp, Color.MAGENTA, true);
-		EZPolygon needle2 = EZ.addPolygon(nxp, nyp, Color.BLUE, true);
-		needle2.turnRight(90);
 	}
 }
